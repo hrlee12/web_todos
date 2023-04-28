@@ -1,2 +1,4 @@
 server/node_modules
-server/jackage-lock.json
+server/package-lock.json
+package-lock.json
+/node_modules

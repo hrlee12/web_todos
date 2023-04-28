@@ -1,5 +1,6 @@
 const { Todo } = require("../models");
 const { Op } = require("sequelize");
+// sql 조건이 같은 것 말고 다른 조건도 가능하게 해주는 모듈
 
 // GET /api/todos - show all todos (READ)
 exports.readTodos = async (_, res) => {
@@ -61,6 +62,10 @@ exports.deleteTodo = async (req, res) => {
     let isDeleted = await Todo.destroy({
       where: {
         id: { [Op.eq]: req.params.todoId },
+        // id >= todoId
+        // id: { [Op.gte]: req.params.todoId },
+        // id > todo
+        // id: { [Op.gt]: req.params.todoId },
       },
       raw: true,
     });

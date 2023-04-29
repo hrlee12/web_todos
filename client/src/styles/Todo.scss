@@ -1,0 +1,34 @@
+@import "./_utils.scss";
+
+.Todo {
+  margin: 10px;
+
+  .checkboxInput {
+    margin-right: 10px;
+  }
+
+  .titleInput {
+    line-height: 10px;
+    font-weight: bold;
+    font-family: "TAEBAEKmilkyway";
+    border: none;
+    border-bottom: 0.1px solid #ffa500;
+    font-size: 1rem;
+    background-color: rgb(255, 255, 193);
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .delButton {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+
+    font-size: 0.1rem;
+    border: 0.1px solid rgb(155, 155, 155);
+    color: rgb(155, 153, 153);
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+  }
+}

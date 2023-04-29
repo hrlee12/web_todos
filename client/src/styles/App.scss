@@ -1,0 +1,46 @@
+@import "./_utils.scss";
+
+.App {
+  text-align: center;
+  margin: 50px;
+  display: flex;
+
+  .innerContainer {
+    width: 34%;
+
+    &#main {
+      position: relative;
+      padding: 30px 10px 100px 0px;
+      width: 32%;
+      background-color: rgb(255, 255, 193);
+      border-radius: 0 0 60px 0;
+      box-shadow: 7px 7px 3px rgb(231, 231, 231);
+
+      .title {
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+      }
+
+      .countTodos {
+        font-size: 0.8rem;
+        color: grey;
+        position: absolute;
+        bottom: 60px;
+        left: 60px;
+      }
+      .triangle {
+        width: 0;
+        height: 0;
+        border-bottom: 40px solid transparent;
+        border-top: 40px solid transparent;
+        border-left: 40px solid rgb(236, 234, 152);
+        border-right: 40px solid transparent;
+        border-radius: 30px;
+        position: absolute;
+        right: 5px;
+        bottom: 7px;
+        transform: rotate(225deg);
+      }
+    }
+  }
+}

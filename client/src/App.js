@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Todo from "./components/Todo";
 import AddTodo from "./components/AddTodo";
+import "./styles/App.scss";
 function App() {
   const [todoItems, setTodoItems] = useState([
     {
@@ -41,15 +42,20 @@ function App() {
   };
   return (
     <div className="App">
-      {/* todo 추가 input */}
-
-      {/* prop으로 함수도 넘기기 가능 */}
-      <AddTodo addItem={addItem} />
-
-      {/* todo 목록 보이기 */}
-      {todoItems.map((item) => {
-        return <Todo key={item.id} item={item} deleteItem={deleteItem} />;
-      })}
+      <div className="innerContainer"></div>
+      <div className="innerContainer" id="main">
+        <div className="title">Todo List</div>
+        {/* todo 목록 보이기 */}
+        {todoItems.map((item) => {
+          return <Todo key={item.id} item={item} deleteItem={deleteItem} />;
+        })}
+        {/* todo 추가 input */}
+        {/* prop으로 함수도 넘기기 가능 */}
+        <AddTodo addItem={addItem} />
+        <div className="countTodos">총 {todoItems.length}개 </div>
+        <div class="triangle"></div>
+      </div>
+      <div className="innerContainer"></div>
     </div>
   );
 }
